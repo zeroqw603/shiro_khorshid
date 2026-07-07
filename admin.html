@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>پنل مدیریت</title>
+</head>
+
+<body>
+
+<h2>پنل مدیریت</h2>
+
+<input id="ipInput" placeholder="IP جدید">
+
+<button onclick="addIP()">
+افزودن
+</button>
+
+<div id="list"></div>
+
+<script>
+
+let ips=[];
+
+function addIP(){
+
+let ip=document.getElementById("ipInput").value;
+
+ips.push(ip);
+
+showIPs();
+
+}
+
+function showIPs(){
+
+let html="";
+
+ips.forEach(function(ip){
+
+html+="<p>"+ip+"</p>";
+
+});
+
+document.getElementById("list").innerHTML=html;
+
+}
+
+</script>
+
+</body>
+</html>
