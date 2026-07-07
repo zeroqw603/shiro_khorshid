@@ -1,4 +1,19 @@
 // لیست IP ها
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyA8jxZ-k_NRungjKUj6mJDbaaZQHEM_2dY",
+  authDomain: "shir-o-khorshid-46e10.firebaseapp.com",
+  projectId: "shir-o-khorshid-46e10",
+  storageBucket: "shir-o-khorshid-46e10.firebasestorage.app",
+  messagingSenderId: "110448214659",
+  appId: "1:110448214659:web:9fb0f4ae7b34d1337911b6",
+  measurementId: "G-MSJFCT8RTY"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 const ipList = [
   "104.18.0.1",
   "172.67.0.1",
